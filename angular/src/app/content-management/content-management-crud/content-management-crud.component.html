@@ -1,0 +1,30 @@
+<div [hidden]="!showEditor">
+  <abp-form-input inputPlaceholder="Input your title here..." [(ngModel)]="title"></abp-form-input>
+
+  <editor apiKey="ld9r7ose65ozoq0vzlkwu1uop00578rkmlnj82vqmkppcp4r"
+          [(ngModel)]="html"
+          [init]="{
+          selector: '#cms',
+          a_plugin_option: false,
+          a_configuration_option: 400
+}"
+  ></editor>
+
+  <div style="display: flex; justify-content: end; ">
+    <div style="margin:10px 5px 0 0"><abp-button (click)="save()">Save</abp-button></div>
+    <div style="margin:10px 0"><abp-button (click)="back()">Back</abp-button></div>
+  </div>
+</div>
+
+<div [hidden]="showEditor">
+  <div class="cardTop">
+    <span class="titlePage">{{title}}</span>
+  </div>
+  <div class="cardRelease">
+    <div class="cardReleaseContent" [innerHTML]="htmlRender"></div>
+  </div>
+  <div style="display: flex; justify-content: end; ">
+    <div style="margin:10px 5px 0 0"><abp-button (click)="edit()">Edit</abp-button></div>
+    <div style="margin:10px 0"><abp-button (click)="back()">Back</abp-button></div>
+  </div>
+</div>

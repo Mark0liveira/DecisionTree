@@ -1,0 +1,14 @@
+<div class="cardTop">
+  <span class="titlePage">Release Notes</span>
+
+  <abp-button (click)="create()">New</abp-button>
+</div>
+
+<div class="allCards">
+  <div *ngFor="let data of datas">
+    <div class="cardRelease" (click)="edit(data.id)">
+      <h5 class="cardReleaseTitle">{{data.title}}</h5>
+      <div class="cardReleaseContent" [innerHTML]="data.content"></div>
+    </div>
+  </div>
+</div>

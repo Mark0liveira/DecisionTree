@@ -1,0 +1,42 @@
+.cardTop {
+  background: #e8e8e8;
+  display: flex;
+  color: #161616;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  padding: 0.75rem;
+}
+
+.card {
+  width: 18rem;
+}
+
+.titlePage{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.allCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+  row-gap: 10px;
+  column-gap: 10px;
+  .cardRelease{
+    width: 18rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    height: 10rem;
+    cursor: pointer;
+    .cardReleaseContent{
+      max-width: 20ch !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-height: 10ch !important;
+    }
+  }
+}
